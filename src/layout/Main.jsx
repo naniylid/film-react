@@ -12,14 +12,9 @@ function Main() {
   const searchMovies = (str, type = 'all') => {
     setLoading(true);
     fetch(
-      `http://www.omdbapi.com/?i=tt3896198&apikey=e6135465&s=${str}${
-<<<<<<< HEAD
+      `http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${str}${
         type !== 'all' ? `&type=${type}` : ''
       }`,
-=======
-        type !== "all" ? `&type=${type}` : ""
-      }`
->>>>>>> 61df548ad7b939b24e2e15215cd7ef5273f85020
     )
       .then((response) => response.json())
       .then((data) => {
@@ -33,7 +28,7 @@ function Main() {
   };
 
   useEffect(() => {
-    fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=e6135465&s=shrek?`)
+    fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=shrek?`)
       .then((response) => response.json())
       .then((data) => {
         setMovies(data.Search);
