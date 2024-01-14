@@ -13,8 +13,13 @@ function Main() {
     setLoading(true);
     fetch(
       `http://www.omdbapi.com/?i=tt3896198&apikey=e6135465&s=${str}${
+<<<<<<< HEAD
         type !== 'all' ? `&type=${type}` : ''
       }`,
+=======
+        type !== "all" ? `&type=${type}` : ""
+      }`
+>>>>>>> 61df548ad7b939b24e2e15215cd7ef5273f85020
     )
       .then((response) => response.json())
       .then((data) => {
